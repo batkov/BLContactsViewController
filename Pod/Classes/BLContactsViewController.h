@@ -54,7 +54,7 @@ extern NSString * const BLContactsDefaultCellIdentifier;
 /**
  * Delegate method called when user tapped Cancel button.
  */
-- (void) contactsControllerCancelTapped:(BLContactsViewController *) controller;
+- (void) contactsControllerDidCancel:(BLContactsViewController *) controller;
 
 /**
  * Delegate method called when user selected some item (in search results or from full list).

@@ -50,10 +50,20 @@ NSString *const BLContactsDefaultCellIdentifier = @"BLContactsDefaultCellIdentif
     if ([self.navigationController.viewControllers count] != 1)
         return;
     
-    UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-                                                                          target:self
-                                                                          action:@selector(cancelTapped:)];
+    UIBarButtonItem * btn = nil;
+    btn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                        target:self
+                                                        action:@selector(dismissController)];
     self.navigationItem.leftBarButtonItem = btn;
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+        // back button was pressed.  We know this is true because self is no longer
+        // in the navigation stack.
+        [self userDidCancel];
+    }
+    [super viewWillDisappear:animated];
 }
 
 #pragma mark - Data Management
@@ -130,8 +140,13 @@ NSString *const BLContactsDefaultCellIdentifier = @"BLContactsDefaultCellIdentif
     return searchBarEnabled;
 }
 
-- (IBAction)cancelTapped:(id)sender {
-    [self.contactsDelegate contactsControllerCancelTapped:self];
+- (void) dismissController {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self userDidCancel];
+}
+
+- (void) userDidCancel {
+    [self.contactsDelegate contactsControllerDidCancel:self];
 }
 
 - (BLContactItem *) itemAtIndexPath:(NSIndexPath *) indexPath tableView:(UITableView *)tableView {

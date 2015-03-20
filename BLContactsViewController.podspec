@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BLContactsViewController"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "You can get list splitted on sections by alphabet in few lines of code."
   s.description      = <<-DESC
                        Are you bored writing UITableViewControllers that looks like standard iOS Contacts page?

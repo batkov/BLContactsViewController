@@ -25,7 +25,7 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Hariton Batkov, hariton.batkov@p-product.com
+Hariton Batkov, batkov@i.ua
 
 ## License
 

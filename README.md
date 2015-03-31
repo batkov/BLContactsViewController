@@ -4,11 +4,13 @@
 
 Are you bored writing UITableViewControllers that looks like standard iOS Contacts page?
 Write one delegate method for BLContactsViewController like:
+
 ```-(NSArray *)titlesForContactsController:(BLContactsViewController *)controller```
                       
 and present it like
 
 ```[self.navigationController pushViewController:[BLContactsViewController contactsControllerWithDelegate:self] animated:YES];```
+
 More customization inside.
 
 ## Usage

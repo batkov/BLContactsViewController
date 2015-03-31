@@ -1,5 +1,7 @@
 # BLContactsViewController
 
+![alt tag](https://github.com/batkov/BLContactsViewController/blob/master/Screenshots/BLContactsViewController.gif)
+
 Are you bored writing UITableViewControllers that looks like standard iOS Contacts page?
 Write one delegate method for BLContactsViewController like:
 ```-(NSArray *)titlesForContactsController:(BLContactsViewController *)controller```
@@ -12,9 +14,6 @@ More customization inside.
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-
-## Requirements
 
 ## Installation
 

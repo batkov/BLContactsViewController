@@ -19,7 +19,7 @@ NSString *const BLContactsDefaultCellIdentifier = @"BLContactsDefaultCellIdentif
 
 @implementation BLContactsViewController
 + (NSString *) storyboardName {
-    return @"BLContacts";
+    return @"BLContactsViewController.bundle/BLContacts";
 }
 + (UINavigationController *) navigationControllerWithContactsControllerWithDelegate:(id <BLContactsViewControllerDelegate>) delegate {
     UIStoryboard * storyboard = [UIStoryboard storyboardWithName:[self storyboardName]

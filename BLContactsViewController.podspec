@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BLContactsViewController"
-  s.version          = "0.1.3"
+  s.version          = "0.1.4"
   s.summary          = "Parsing list of objectas to UITableView with sections by alphabet in few lines of code."
   s.description      = <<-DESC
                        Are you bored writing UITableViewControllers that looks like standard iOS Contacts page?
